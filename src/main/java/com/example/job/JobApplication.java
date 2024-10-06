@@ -24,14 +24,14 @@ public class JobApplication {
         return args -> {
             final var random = new Random();
 
-            final var randomNumber = random.nextInt(6) + 1; // Generates a random number between 1 and 6
+            final var randomNumber = random.nextInt(5) + 1; // Generates a random number between 1 and 6
             log.info("Generated number: {}", randomNumber);
 
-            if (randomNumber == 6) {
-                log.info("Success! 6 received, job completed");
+            if (randomNumber == 5 || randomNumber == 1) {
+                log.info("Success! Required number received={}", randomNumber);
                 System.exit(0);
             } else {
-                log.info("Application stopping as 6 was not received");
+                log.info("Application stopping as required number was not received");
                 System.exit(1);
             }
 
