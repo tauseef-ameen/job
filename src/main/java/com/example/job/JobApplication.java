@@ -24,7 +24,7 @@ public class JobApplication {
         return args -> {
             final var random = new Random();
 
-            final var randomNumber = random.nextInt(5) + 1; // Generates a random number between 1 and 6
+            final var randomNumber = random.nextInt(5) + 1; // Generates a random number between 1 and 5
             log.info("Generated number: {}", randomNumber);
 
             if (randomNumber == 5 || randomNumber == 1) {
